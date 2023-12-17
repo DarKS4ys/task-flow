@@ -45,7 +45,7 @@ export default function UserMenuButton({session}: UserMenuButtonProps) {
                     <DropdownMenuSeparator/>
 
                     {/* <Button className="w-full mt-1" onClick={() => signOut({callbackUrl: "/"})}>Sign Out</Button> */}
-                    <LogOutButton className="mt-1" callback="/sign-in"/>
+                    <LogOutButton className="mt-1"/>
                      
                     </DropdownMenuContent>
                 </DropdownMenu>

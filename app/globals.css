@@ -4,6 +4,11 @@
  
 @layer base {
   :root {
+    --highlight: #050505;
+    --highlighthover: #262727;
+
+    --shade: rgba(11, 11, 11, 0.632);
+
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
 
@@ -36,6 +41,11 @@
   }
  
   .dark {
+    --highlight: #ffffff;
+    --highlighthover: #ebf0ff;
+  
+    --shade: rgba(255, 255, 255, 0.632);
+    
     --background: 224 71.4% 4.1%;
     --foreground: 210 20% 98%;
  
