@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { AiOutlineLoading } from 'react-icons/ai';
-import {FaGoogle} from 'react-icons/fa'
+import {FaDiscord, FaGoogle} from 'react-icons/fa'
 import { Button } from './ui/button';
 
 type Props = {
@@ -14,6 +14,7 @@ type Props = {
 
 const UserAuthForm = (props: Props) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoadingDiscord, setIsLoadingDiscord] = useState<boolean>(false);
 
   const loginWithGoogle = async () => {
     setIsLoading(true);
@@ -29,15 +30,39 @@ const UserAuthForm = (props: Props) => {
     }
   };
 
+  
+  const loginWithDiscord = async () => {
+    setIsLoadingDiscord(true);
+    try {
+      await signIn('discord',{
+        redirect: true,
+        callbackUrl: props.callbackUrl ?? '/'
+      });
+    } catch (error) {
+
+    } finally {
+      setIsLoadingDiscord(false);
+    }
+  };
+
   return (
-    <div className='flex justify-center w-full'>
+    <div className='flex flex-col justify-center items-center w-full gap-2'>
       <Button
         onClick={loginWithGoogle}
         disabled={isLoading}
-        className="w-2/6 flex gap-2"
+        className="w-4/6 flex gap-2"
       >
         {isLoading ? <AiOutlineLoading className="animate-spin"/> : <FaGoogle size={20}/>}
         <h1>Google</h1>
+      </Button>
+      <Button
+        onClick={loginWithDiscord}
+        disabled={isLoadingDiscord}
+        variant={'outline'}
+        className="w-4/6 flex gap-2"
+      >
+        {isLoadingDiscord ? <AiOutlineLoading className="animate-spin"/> : <FaDiscord size={20}/>}
+        <h1>Discord</h1>
       </Button>
     </div>
   );

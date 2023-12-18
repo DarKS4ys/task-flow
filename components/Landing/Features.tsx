@@ -3,6 +3,7 @@
 import React, { useRef } from 'react';
 import FeatureCard from './FeatureCard';
 import { motion } from 'framer-motion';
+import TiltCard from './TiltCard';
 
 interface Feature {
   name: string;
@@ -20,12 +21,12 @@ export default function Features({ features }: { features: Feature[] }) {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.05 * index * 2,
+        delay: 0.05 * index * 2.5,
       },
     }),
   };
   return (
-    <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full mt-8"
+    <motion.div className="grid mx-auto grid-cols-1 lg:grid-cols-3 gap-4 w-full mt-8"
     >
       {features.map((feature, i) => (
         <motion.div
@@ -38,11 +39,7 @@ export default function Features({ features }: { features: Feature[] }) {
           custom={i}
           key={i}
         >
-          <FeatureCard
-            title={feature.name}
-            description={feature.description}
-            color={feature.color}
-          />
+          <TiltCard color={feature.color} title={feature.name}/>
         </motion.div>
       ))}
     </motion.div>

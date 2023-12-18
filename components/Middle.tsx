@@ -9,7 +9,7 @@ export default function Middle() {
       description:
         'Effortlessly conquer your daily tasks and boost productivity with our sleek Task Manager.',
       color:
-        'bg-gradient-to-br from-green-400 to-green-600 dark:from-green-300 dark:to-green-600/70 text-white',
+        'bg-gradient-to-br from-green-600/70 to-green-800 dark:from-green-300 dark:to-green-600/70',
     },
 
     {
@@ -17,7 +17,7 @@ export default function Middle() {
       description:
         'Discover, organize, and collaborate on your code snippets seamlessly with Code Nexus.',
       color:
-        'bg-gradient-to-br from-primary/50 to-red-500 dark:from-primary/20 dark:to-red-500/70 text-white',
+        'bg-gradient-to-br from-primary/50 to-red-500 dark:from-primary/20 dark:to-red-500/70',
     },
 
     {
@@ -25,7 +25,7 @@ export default function Middle() {
       description:
         'Unleash your creative potential on a versatile and seamless canvas with Canvas Studio.',
       color:
-        'bg-gradient-to-br from-blue-300 to-purple-500 dark:from-blue-300 dark:to-purple-500/70 text-white',
+        'bg-gradient-to-br from-blue-300 to-purple-500 dark:from-blue-300 dark:to-purple-500/70',
     },
   ];
   return (

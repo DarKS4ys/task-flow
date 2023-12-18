@@ -15,14 +15,15 @@ export default async function DashboardPage() {
   const session = await getServerSession(authOptions);
   const user = session?.user;
 
-  if (!session) {
-    redirect('/');
-  }
-
   return (
-    <div className="py-10 px-4 md:px-8 flex flex-col gap-4 max-w-6xl mx-auto">
+    <div className="py-10 px-4 md:px-8 flex flex-col gap-4 ">
       {user && user.name ? (
+        <div className='flex flex-col gap-4'>
+        
         <Welcome userName={user.name}/>
+
+
+        </div>
       ) : (
         <Unauthorized/>
       )

@@ -36,7 +36,7 @@ const SignIn = async (props: Props) => {
           </div>
         :
         <>
-          <h1 className="font-semibold text-3xl tracking-tight">Login to your account</h1>
+          <h1 className="font-semibold text-3xl tracking-tight">Sign in to your Task Flow account</h1>
           <UserAuthForm callbackUrl={props.callbackUrl}/>
         </>
         }
