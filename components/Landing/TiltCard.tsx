@@ -59,7 +59,7 @@ const TiltCard = ({ title, color }: { color: string, title: string }) => {
           transform: 'translateZ(75px)',
           transformStyle: 'preserve-3d',
         }}
-        className="absolute inset-4 p-4 gap-4 grid place-content-center rounded-xl bg-white shadow-lg"
+        className="absolute inset-4 p-4 gap-4 grid place-content-center rounded-xl bg-primary-foreground shadow-lg"
       >
         <div
           style={{

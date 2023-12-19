@@ -51,18 +51,9 @@ export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   return (
     <div className={styles.parallax}>
       <motion.div className={styles.scroller} style={{ x }}>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
+        {Array.from({ length: 12 }).map((_, index) => (
+          <span key={index}>{children}</span>
+        ))}
       </motion.div>
     </div>
   );
