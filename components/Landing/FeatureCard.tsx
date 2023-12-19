@@ -21,7 +21,7 @@ export default function FeatureCard({
       )}
     >
       <div className="rounded-lg overflow-hidden h-60 md:h-52">
-        <LottieAnim/>
+       {/*  <LottieAnim/> */}
       </div>
       <div className="space-y-1">
         <h1 className="text-2xl font-medium">{title}</h1>
