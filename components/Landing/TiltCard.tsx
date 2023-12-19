@@ -67,7 +67,7 @@ const TiltCard = ({ title, color }: { color: string, title: string }) => {
           }}
           className="mx-auto text-4xl rounded-lg overflow-hidden shadow-lg"
         >
-          <LottieAnim />
+          {/* <LottieAnim /> */}
         </div>
 
         <p
