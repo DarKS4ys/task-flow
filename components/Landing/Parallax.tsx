@@ -11,13 +11,17 @@ import {
   useVelocity,
   useAnimationFrame
 } from "framer-motion";
-import { wrap } from "@motionone/utils";
 import styles from '@/components/styles/marquee.module.css';
 
 interface ParallaxProps {
   children: string;
   baseVelocity: number;
 }
+
+const wrap = (min: number, max: number, v: number) => {
+  const rangeSize = max - min;
+  return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min;
+};
 
 export function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   const baseX = useMotionValue(0);
