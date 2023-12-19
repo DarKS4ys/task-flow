@@ -54,6 +54,8 @@ model User {
   accounts      Account[]
   sessions      Session[]
   status        Status    @default(User)
+  createdAt     DateTime  @default(now())
+  onboarding    Boolean   @default(true)
 
   @@map("users")
 }

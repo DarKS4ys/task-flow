@@ -7,6 +7,9 @@
     --highlight: #050505;
     --highlighthover: #262727;
 
+    --highlighthsl: 0, 0%, 2%;
+    --highlighthoverhsl: 192, 6%, 16%;
+
     --shade: rgba(11, 11, 11, 0.632);
 
     --background: 0 0% 100%;
