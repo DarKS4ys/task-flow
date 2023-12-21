@@ -25,7 +25,7 @@ export default async function Header() {
           <ShinyButton label={session ? 'Go to Dashboard' : 'Get Started'} />
         </Link>
       </div>
-      <div className="flex justify-center h-[50vh] w-full mt-10 md:mt-24 2xl:mt-28 items-center pointer-events-none">
+      <div className="flex justify-center h-[50svh] w-full mt-10 md:mt-24 2xl:mt-28 items-center pointer-events-none">
         <Image
           alt="Mockup"
           width={999}
@@ -33,13 +33,13 @@ export default async function Header() {
           src={mockup}
           priority
           placeholder="blur"
-          className="w-[35vh] md:w-[48vh] max-w-[35rem] min-w-[20rem] object-cover pb-10"
+          className="w-[35svh] md:w-[48svh] max-w-[35rem] min-w-[20rem] object-cover pb-10"
         />
       </div>
       <div
         className={`${styles.container} h-full w-full absolute left-0 -z-10 dark:invert opacity-25`}
       >
-        <div className="absolute bottom-0 left-0 w-full h-[50vh] bg-gradient-to-b from-transparent to-white dark:to-primary" />
+        <div className="absolute bottom-0 left-0 w-full h-[50svh] bg-gradient-to-b from-transparent to-white dark:to-primary" />
       </div>
     </div>
   );

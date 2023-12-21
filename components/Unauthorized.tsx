@@ -8,7 +8,7 @@ import { Button } from './ui/button';
 export default function Unauthorized() {
     const router = useRouter();
   return (
-    <div className="flex flex-col gap-4 items-center justify-center py-[25vh] overflow-hidden">
+    <div className="flex flex-col gap-4 items-center justify-center py-[25svh] overflow-hidden">
       <div className="w-[50%] h-[50%] relative flex items-center justify-center">
         <ImSad size={80} />
       </div>

@@ -40,11 +40,11 @@ export default function Sidebar() {
     }
   ];
   return (
-    <div className="w-64 bg-[#e9eef3] dark:bg-background h-full fixed flex flex-col">
+    <div className="w-64 bg-[#e7ecf1] dark:bg-[#131c24] h-full fixed flex flex-col">
       <ul className="flex flex-col gap-2 h-full">
         <Link href={'/dashboard'} className="flex gap-2 text-2xl font-semibold items-center px-8 my-8 mb-4">
           <span className="relative h-14 w-10 flex">
-            <Image fill alt="Logo" src={Logo} />
+            <Image fill alt="Logo" className='dark:invert' src={Logo} />
           </span>
           <h1>Task Flow</h1>
         </Link>

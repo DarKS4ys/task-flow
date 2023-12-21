@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import animationData from '@/app/lotties/lottie.json';
-/* import Lottie from 'react-lottie'; */
+import Lottie from 'lottie-react';
 
 export default function LottieAnim() {
     const defaultOptions = {
@@ -13,6 +13,6 @@ export default function LottieAnim() {
         },
       };
   return (
-    {/* <Lottie options={defaultOptions} /> */}
+     <Lottie animationData={animationData} />
   )
 }

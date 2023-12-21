@@ -5,7 +5,9 @@ import Sidebar from '@/components/Sidebar';
 import { prisma } from '@/lib/db/prisma';
 import Providers from '../providers';
 import { ModeToggle } from '@/components/ui/toggle-mode';
-import Nav from '@/components/Nav';
+import OnboardingBg from '@/public/placeholderB.jpg'
+import Onboarding from '@/components/Onboarding';
+import Image from 'next/image';
 
 export default async function PagesLayout({
   children,
@@ -22,27 +24,30 @@ export default async function PagesLayout({
     where: { id: session.user.id },
   });
 
-  /*   if (user?.onboarding) {
+  if (user?.onboarding) {
     return (
-      <html lang="en">
-        <body>
+      <body>
         <Providers>
-          <div>Onboarding</div>
-          </Providers>
-        </body>
-      </html>
-    )
-  } */
+          <Image src={OnboardingBg} placeholder='blur' alt='Cover' className='object-cover' fill/>
+          <div className='h-screen flex items-center justify-center'>
+          <Onboarding/>
+          </div>
+        </Providers>
+      </body>
+    );
+  }
 
   return (
-    <Providers>
-      <div className="hidden md:flex h-full border-[--border] md:border-r">
-        <Sidebar />
-      </div>
-      <div className="flex flex-col md:pl-64">
-        {/* <MobileSidebar /> */}
-        {children}
-      </div>
-    </Providers>
+    <body>
+      <Providers>
+        <div className="hidden md:flex h-full border-[--border] md:border-r">
+          <Sidebar />
+        </div>
+        <div className="flex flex-col md:pl-64">
+          {/* <MobileSidebar /> */}
+          {children}
+        </div>
+      </Providers>
+    </body>
   );
 }

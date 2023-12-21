@@ -25,7 +25,7 @@ export default function SidebarOption({ options }: { options: Option[] }) {
             className={clsx(
               'p-3 hover:bg-border/50 transition duration-200',
               isActive
-                ? 'bg-gradient-to-r from-[#a4c9d6] to-transparent font-semibold'
+                ? 'bg-gradient-to-r from-[#a0cad9] dark:from-[#9cc9d9a5] to-transparent font-semibold'
                 : 'hover:opacity-100 opacity-80 bg-transparent font-medium'
             )}
             key={i}
