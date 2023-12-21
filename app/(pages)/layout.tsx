@@ -5,7 +5,7 @@ import Sidebar from '@/components/Sidebar';
 import { prisma } from '@/lib/db/prisma';
 import Providers from '../providers';
 import { ModeToggle } from '@/components/ui/toggle-mode';
-import OnboardingBg from '@/public/placeholderB.jpg'
+import OnboardingBg from '@/public/placeholderb.jpg'
 import Onboarding from '@/components/Onboarding';
 import Image from 'next/image';
 
@@ -28,7 +28,7 @@ export default async function PagesLayout({
     return (
       <body>
         <Providers>
-          <Image src={OnboardingBg} placeholder='blur' alt='Cover' className='object-cover' fill/>
+          <Image src={OnboardingBg} placeholder='blur' alt='Cover' className='object-cover opacity-50' fill/>
           <div className='h-screen flex items-center justify-center'>
           <Onboarding/>
           </div>
